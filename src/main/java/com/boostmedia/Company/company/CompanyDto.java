@@ -1,4 +1,8 @@
 package com.boostmedia.Company.company;
 
-public record CompanyDto(Long id, String companyName) {
+import com.boostmedia.Company.employee.EmployeeDto;
+
+import java.util.List;
+
+public record CompanyDto(Long id, String companyName, List<EmployeeDto> employeeDtoList) {
 }

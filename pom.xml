@@ -70,7 +70,7 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>6.5.7</version>
 				<configuration>
-					<url>jdbc:postgresql://localhost:5433/company_app</url>
+					<url>jdbc:postgresql://localhost:5432/postgres</url>
 					<user>postgres</user>
 					<password>root</password>
 				</configuration>
