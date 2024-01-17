@@ -1,10 +1,11 @@
 package com.boostmedia.Company.company;
 
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/company/")
+@RequestMapping(value = "api/v1/company/", consumes ="application/json")
 public class CompanyController {
     private final CompanyService companyService;
 
@@ -12,7 +13,7 @@ public class CompanyController {
         this.companyService = companyService;
     }
 
-    @PostMapping("save")
+    @PostMapping(value = "save", produces = MediaType.APPLICATION_JSON_VALUE )
     public CompanyDto save(@RequestBody CompanyDto dto) {
         return this.companyService.save(dto);
     }

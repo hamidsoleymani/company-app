@@ -1,10 +1,11 @@
 package com.boostmedia.Company.employee;
 
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/Employee/")
+@RequestMapping(value = "api/v1/Employee/")
 public class EmployeeController {
     private final EmployeeService employeeService;
 
@@ -12,12 +13,12 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @PostMapping("save")
+    @PostMapping(value= "save", consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
     public EmployeeDto save(@RequestBody EmployeeDto dto) {
         return this.employeeService.save(dto);
     }
 
-   /* @PutMapping("update")
+   /*n @PutMapping("update")
     public EmployeeDto update(@RequestBody EmployeeDto dto) {
         return this.employeeService.update(dto);
     }
