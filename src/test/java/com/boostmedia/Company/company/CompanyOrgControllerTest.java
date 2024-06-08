@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 @AutoConfigureMockMvc
 @AutoConfigureDataJpa
-class CompanyControllerTest {
+class CompanyOrgControllerTest {
 
     @Autowired
     private ObjectMapper objectMapper;

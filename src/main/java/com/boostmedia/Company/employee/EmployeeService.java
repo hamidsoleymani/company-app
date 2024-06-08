@@ -1,5 +1,6 @@
 package com.boostmedia.Company.employee;
 
+import com.boostmedia.Company.autoconfiguration.AppConfig;
 import com.boostmedia.Company.company.CompanyService;
 import org.springframework.stereotype.Service;
 
@@ -8,13 +9,14 @@ import java.util.NoSuchElementException;
 
 @Service
 public class EmployeeService {
-
+    private AppConfig appConfig;
     private final CompanyService companyService;
     private final EmployeeRepository employeeRepository;
 
-    public EmployeeService(CompanyService companyService, EmployeeRepository employeeRepository) {
+    public EmployeeService(CompanyService companyService, EmployeeRepository employeeRepository, AppConfig appConfig) {
         this.companyService = companyService;
         this.employeeRepository = employeeRepository;
+        this.appConfig = appConfig;
     }
 
     public EmployeeDto save(EmployeeDto dto) {

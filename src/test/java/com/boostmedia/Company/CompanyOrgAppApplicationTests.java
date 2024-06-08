@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import static org.junit.jupiter.api.Assertions.*;
 
 //@SpringBootTest
-class CompanyAppApplicationTests {
+class CompanyOrgAppApplicationTests {
 
     int a[] = {2, 3};
 List<Integer> aa=  List.of(1,3);
